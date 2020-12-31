@@ -49,6 +49,20 @@ export default function Home({ allPostsData }) {
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
+  /*
+  console.log(allPostsData[0].date)
+  console.log(dateParse(allPostsData[0].date))
+  let i = 0
+  // let now = new Date()
+  allPostsData.forEach((element, index) => {
+    if(dateParse(element.date)) i = index
+  })
+  return {
+    props: {
+      allPostsData: allPostsData.slice(0,i)
+    }
+  }
+  */
   return {
     props: {
       allPostsData
