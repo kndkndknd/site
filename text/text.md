@@ -2,8 +2,13 @@
 title: 'text'
 date: '2020-12-31'
 type: 'text'
-published: '2021-1-1'
+published: '2021-1-3'
 ---
+## 2021/01/03
+* 正月休みが終わる。
+* 休み期間は、Next.jsによるウェブサイト作成（このサイト）と、自分の演奏用のアプリ（これはNode.js＋Express＋socket.io＋web audio api＋getUserMediaという感じで、増改築を繰り返しているので本当は作り直したいのだけど、それやるくらいなら新しいことやりたいというよくあるアレでそのまま）の追加修正をちょっと、OpenCVとPrismaの勉強をちょっと、という感じで終わった。
+* 1/5は演奏をします
+
 ## 2021/01/01
 * あけましておめでとうございます。今年もよろしくお願いします。
 * [![Image from Gyazo](https://i.gyazo.com/d2d87ab31773387fc9f733150830a28a.jpg)](https://gyazo.com/d2d87ab31773387fc9f733150830a28a)
