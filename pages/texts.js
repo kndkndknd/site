@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
-import { getTextData } from '../lib/texts'
+import { getMdData } from '../lib/mdParse'
 //import Date from '../../components/date'
 
 export default function Text({ textData }) {
@@ -24,7 +24,7 @@ export async function getStaticPaths() {
 */
 
 export async function getStaticProps() {
-  const textData = await getTextData()
+  const textData = await getMdData('text.md')
   return {
     props: {
       textData
