@@ -25,17 +25,15 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
         <h2 className={utilStyles.headingLg}>release</h2>
-        <ul className={utilStyles.list}>
           {allPostsData.release.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
                 <a>
-                  {title} - <Date dateString={date} />
+                  {title}
                 </a>
               </Link>
             </li>
           ))}
-        </ul>
         <h2 className={utilStyles.headingLg}>About</h2>
         <ul className={utilStyles.list}>
           <li className={utilStyles.listItem}>
