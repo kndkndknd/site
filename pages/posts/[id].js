@@ -3,6 +3,8 @@ import Layout from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '../../components/date'
 
+const postsDirectory = path.join(process.cwd(), 'posts')
+
 export default function Post({ postData }) {
   return (
     <Layout>
@@ -15,7 +17,7 @@ export default function Post({ postData }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds()
+  const paths = getAllPostIds(postsDirectory)
   return {
     paths,
     fallback: false
@@ -23,7 +25,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id)
+  const postData = await getPostData(params.id, postsDirectory)
   return {
     props: {
       postData
