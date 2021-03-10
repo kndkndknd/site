@@ -4,6 +4,7 @@ import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from "../lib/posts"
 import DateParse from '../components/date'
+import { format, parseISO } from 'date-fns'
 
 export default function Home({ allPostsData }) {
   return (
@@ -14,7 +15,7 @@ export default function Home({ allPostsData }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>concert</h2>
         <ul className={utilStyles.list}>
-          {allPostsData.concert.map(({ id, date, title }) => (
+          { allPostsData.concert.length > 0 ? allPostsData.concert.map(({ id, date, title }) => ( 
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
                 <a>
@@ -22,7 +23,7 @@ export default function Home({ allPostsData }) {
                 </a>
               </Link>
             </li>
-          ))}
+          )): <li> no concert scheduled </li>}
         </ul>
         <h2 className={utilStyles.headingLg}>release</h2>
           {allPostsData.release.map(({ id, date, title }) => (
@@ -63,9 +64,10 @@ export default function Home({ allPostsData }) {
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
   let i = 0
-  let now = new Date()
+  const now = new Date()
   allPostsData.concert.forEach((element, index) => {
-    if(now.getFullYear + "/" + now.getMonth + "/" + now.getDate === element.date) i = index
+    const date = parseISO(element.date)
+    if(date > now) i = index
   })
   allPostsData.concert = allPostsData.concert.slice(0,i+1)
   return {
