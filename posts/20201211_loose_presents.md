@@ -1,7 +1,7 @@
 ---
 title: 'loose presents knd x Hiroaki Maki duo'
 date: '2020-12-11'
-type: 'upcoming'
+type: 'concert'
 ---
 
 ## loose presents knd x Hiroaki Maki duo

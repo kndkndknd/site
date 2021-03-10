@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from "../lib/posts"
-import Date from '../components/date'
+import DateParse from '../components/date'
 
 export default function Home({ allPostsData }) {
   return (
@@ -18,7 +18,7 @@ export default function Home({ allPostsData }) {
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
                 <a>
-                  {title} - <Date dateString={date} />
+                  <DateParse dateString={date} /> - {title}
                 </a>
               </Link>
             </li>
@@ -51,6 +51,9 @@ export default function Home({ allPostsData }) {
           <li className={utilStyles.listItem}>
             <Link href={`texts`}>text</Link>
           </li>
+          <li className={utilStyles.listItem}>
+            <Link href={`concerts`}>concert(archive)</Link>
+          </li>
         </ul>
       </section>
     </Layout>
@@ -59,20 +62,12 @@ export default function Home({ allPostsData }) {
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
-  /*
-  console.log(allPostsData[0].date)
-  console.log(dateParse(allPostsData[0].date))
   let i = 0
-  // let now = new Date()
-  allPostsData.forEach((element, index) => {
-    if(dateParse(element.date)) i = index
+  let now = new Date()
+  allPostsData.concert.forEach((element, index) => {
+    if(now.getFullYear + "/" + now.getMonth + "/" + now.getDate === element.date) i = index
   })
-  return {
-    props: {
-      allPostsData: allPostsData.slice(0,i)
-    }
-  }
-  */
+  allPostsData.concert = allPostsData.concert.slice(0,i+1)
   return {
     props: {
       allPostsData
