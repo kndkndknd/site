@@ -8,13 +8,13 @@ const postsDirectory = path.join(process.cwd(), 'posts')
 
 export function getSortedPostsData() {
   // /posts　配下のファイル名を取得する
-  const fileNames = fs.readdirSync(postsDirectory)
-  const allPostsData = fileNames.map(fileName => {
+  const fileNames: string[] = fs.readdirSync(postsDirectory)
+  const allPostsData: any = fileNames.map(fileName => {
     // id を取得するためにファイル名から ".md" を削除する
-    const id = fileName.replace(/\.md$/, '')
+    const id: string = fileName.replace(/\.md$/, '')
     // マークダウンファイルを文字列として読み取る
-    const fullPath = path.join(postsDirectory, fileName)
-    const fileContents = fs.readFileSync(fullPath, 'utf8')
+    const fullPath: string = path.join(postsDirectory, fileName)
+    const fileContents: string = fs.readFileSync(fullPath, 'utf8')
 
     // 投稿のメタデータ部分を解析するために gray-matter を使う
     const matterResult = matter(fileContents)
@@ -59,7 +59,7 @@ export function getSortedPostsData() {
 }
 
 export function getAllPostIds(directory) {
-  const fileNames = fs.readdirSync(directory)
+  const fileNames: string[] = fs.readdirSync(directory)
 
   return fileNames.map(fileName => {
     return {
@@ -71,8 +71,8 @@ export function getAllPostIds(directory) {
 }
 
 export async function getPostData(id, directory) {
-  const fullPath = path.join(directory, `${id}.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  const fullPath: string = path.join(directory, `${id}.md`)
+  const fileContents: string = fs.readFileSync(fullPath, 'utf8')
 
   const matterResult = matter(fileContents)
 
@@ -80,7 +80,7 @@ export async function getPostData(id, directory) {
     .use(html)
     .process(matterResult.content)
 
-  const contentHtml = processedContent.toString()
+  const contentHtml: string = processedContent.toString()
 
   return {
     id,
@@ -93,13 +93,13 @@ const textsDirectory = path.join(process.cwd(), 'texts')
 
 export function getSortedTextsData() {
   // /posts　配下のファイル名を取得する
-  const fileNames = fs.readdirSync(textsDirectory)
-  const allTextsData = fileNames.map(fileName => {
+  const fileNames: string[] = fs.readdirSync(textsDirectory)
+  const allTextsData:any = fileNames.map(fileName => {
     // id を取得するためにファイル名から ".md" を削除する
-    const id = fileName.replace(/\.md$/, '')
+    const id: string = fileName.replace(/\.md$/, '')
     // マークダウンファイルを文字列として読み取る
-    const fullPath = path.join(textsDirectory, fileName)
-    const fileContents = fs.readFileSync(fullPath, 'utf8')
+    const fullPath: string = path.join(textsDirectory, fileName)
+    const fileContents: string = fs.readFileSync(fullPath, 'utf8')
 
     // 投稿のメタデータ部分を解析するために gray-matter を使う
     const matterResult = matter(fileContents)
