@@ -7,7 +7,17 @@ console.log(process.cwd())
 
 const textsDirectory = path.join(process.cwd(), 'texts')
 
-export default function Post({ postData }) {
+export default function Post({ postData, router }) {
+    /*
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    let insta = document.createAttribute("src");
+    insta.value = "https://www.instagram.com/embed.js";
+    script.setAttributeNode(insta);
+    document.head.appendChild(script);
+  },[])
+    */
   return (
     <Layout home>
       <Head>
