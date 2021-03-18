@@ -23,6 +23,7 @@ export default function Post({ postData, router }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
+      <h2>{postData.title}</h2>
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </Layout>
   )
