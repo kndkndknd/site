@@ -19,7 +19,7 @@ export default function Home({ allPostsData }) {
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
                 <a>
-                  <DateParse dateString={date} /> - {title}
+                  <DateParse dateString={date} /> {title}
                 </a>
               </Link>
             </li>
