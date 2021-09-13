@@ -19,16 +19,16 @@ https://twitch.tv/novo_kato
 Suggested¥1500～  
 http://paypal.me/NOVOkato  
 
-GUEST
+GUEST  
 Nerve(from香港)
 
-LIVE
-岡千穂
-biki
-knd
-seaketa
+LIVE  
+岡千穂  
+biki  
+knd  
+seaketa  
 Yui Nakamura
 
-DJ
-eminemsaiko
-Luna Woelle
+DJ  
+eminemsaiko  
+Luna Woelle  
