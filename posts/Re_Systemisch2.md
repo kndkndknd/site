@@ -1,5 +1,5 @@
 ---
-title: 'Re​:​Systemisch2'
+title: 'Re​:​Systemisch2 - Hidenobu Ito / Various Artist'
 date: '2021-10-17'
 type: 'release'
 published: '2021-10-18'
