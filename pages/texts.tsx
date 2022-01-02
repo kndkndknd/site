@@ -6,6 +6,11 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedTextsData } from "../lib/posts"
 import Date from '../components/date'
 
+// import { useRef } from 'react';
+// import Script from 'next/script';
+
+// import { useEffect } from 'react';
+
 export default function Home({ allTextData }) {
   return (
     <Layout home>
@@ -38,3 +43,17 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   }
 }
+/*
+export function useInstagramEmbbed() {
+  useEffect(() => {
+    const s = document.createElement("script");
+    s.setAttribute("src", "//www.instagram.com/embed.js");
+    s.setAttribute("async", "true");
+    document.head.appendChild(s);
+
+    if ((window as any).instgrm) {
+          (window as any).instgrm.Embeds.process()
+    }
+  })
+}
+*/
