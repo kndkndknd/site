@@ -26,7 +26,7 @@ export default function Layout({ children, home }) {
         <meta name="twitter:site" content="knd" />
         <meta name="twitter:title" content="knd.cloud" />
         <meta name="twitter:description" content="knd" />
-        <meta name="twitter:image" content="https://knd.cloud/images/profile.jpg" />
+        <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1365947109271162884/tIlGQtVd_400x400.jpg" />
       </Head>
       <header className={styles.header}>
         {home ? (
