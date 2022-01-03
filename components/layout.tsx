@@ -23,6 +23,9 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="knd" />
+        <meta name="twitter:title" content="knd.cloud" />
+        <meta name="twitter:description" content="knd" />
         <meta name="twitter:image" content="https://knd.cloud/images/profile.jpg" />
       </Head>
       <header className={styles.header}>
