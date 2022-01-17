@@ -19,7 +19,6 @@ export default function Layout({ children, home }) {
           property="og:image"
           content="https://knd.cloud/images/profile.jpg"
         />
-        <meta name="og:title" content={siteTitle} />
         
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="knd" />

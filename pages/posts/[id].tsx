@@ -11,6 +11,7 @@ export default function Post({ postData }) {
     <Layout home>
       <Head>
         <title>{postData.title}</title>
+        <meta name="og:title" content={postData.title} />
       </Head>
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </Layout>
