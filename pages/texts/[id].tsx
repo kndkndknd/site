@@ -45,7 +45,6 @@ export default function Post({ postData, router }) {
       </Head>
       <h2>{postData.title}</h2>
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      <Link href={`texts`}>一覧に戻る</Link>
     </Layout>
   )
 }
