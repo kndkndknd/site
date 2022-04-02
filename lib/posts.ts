@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { remark } from "remark";
 import html from 'remark-html';
+import markdownToHtml from 'zenn-markdown-html';
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
@@ -75,13 +76,14 @@ export async function getPostData(id, directory) {
   const fileContents: string = fs.readFileSync(fullPath, 'utf8')
 
   const matterResult = matter(fileContents)
-
+/*
   const processedContent = await remark()
     .use(html)
     .process(matterResult.content)
 
   const contentHtml: string = processedContent.toString()
-
+*/
+  const contentHtml = await markdownToHtml(matterResult.content || '')
   return {
     id,
     contentHtml,
