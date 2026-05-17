@@ -19,9 +19,7 @@ export default function Home({ allPostsData }) {
           {allPostsData.concert.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
-                <a>
-                  <DateParse dateString={date} /> {title}
-                </a>
+                <DateParse dateString={date} /> {title}
               </Link>
             </li>
           ))}

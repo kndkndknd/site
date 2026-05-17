@@ -24,9 +24,7 @@ export default function Home({ allTextData }) {
           {allTextData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/texts/${id}`}>
-                <a>
-                  <Date dateString={date} /> - {title}
-                </a>
+                <Date dateString={date} /> - {title}
               </Link>
             </li>
           ))}

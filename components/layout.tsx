@@ -26,22 +26,18 @@ export default function Layout({ children, home }) {
       </Head>
       <header className={styles.header}>
         <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-              </a>
+          <img
+            src="/images/profile.jpg"
+            className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+            alt={name}
+          />
         </Link>
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+        <h1 className={utilStyles.heading2Xl}>{name}</h1>
       </header>
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
+          <Link href="/">← Back to home</Link>
         </div>
       )}
     </div>

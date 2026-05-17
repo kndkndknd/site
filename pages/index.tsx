@@ -17,12 +17,10 @@ export default function Home({ allPostsData }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>concert</h2>
         <ul className={utilStyles.list}>
-          { allPostsData.concert.length > 0 ? allPostsData.concert.map(({ id, date, title }) => ( 
+          { allPostsData.concert.length > 0 ? allPostsData.concert.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
-                <a>
-                  <DateParse dateString={date} />  {title}
-                </a>
+                <DateParse dateString={date} />  {title}
               </Link>
             </li>
           )): <li>no concert scheduled</li>}
@@ -32,9 +30,7 @@ export default function Home({ allPostsData }) {
           {allPostsData.release.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
-                <a>
-                  {title}
-                </a>
+                {title}
               </Link>
             </li>
           ))}
