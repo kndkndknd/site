@@ -4,8 +4,8 @@ import Link from 'next/link'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from "../lib/posts"
+import { parsePostDate } from "../lib/date"
 import DateParse from '../components/date'
-import { format, parseISO } from 'date-fns'
 
 export default function Home({ allPostsData }) {
   return (
@@ -15,7 +15,7 @@ export default function Home({ allPostsData }) {
         <meta name="og:title" content={siteTitle} />
       </Head>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>concert</h2>
+        <h2 className={utilStyles.headingLg}>upcoming</h2>
         <ul className={utilStyles.list}>
           { allPostsData.concert.length > 0 ? allPostsData.concert.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
@@ -50,13 +50,19 @@ export default function Home({ allPostsData }) {
             Born in Tokyo in 1980, knd performs using JavaScript that runs on a PC browser, after a tabletop bass guitar improvisation and a silent performance using strings and milk bottles.
           </li>
           <li className={utilStyles.listItem}>
-            <a href="https://github.com/kndkndknd/">github</a>
+            <a href="https://github.com/kndkndknd/" target="_blank" rel="noopener noreferrer">github</a>
           </li>
           <li className={utilStyles.listItem}>
-            <a href="https://www.youtube.com/channel/UCBX2wyFXuy5EIapVn8fj0Zw">youtube</a>
+            <a href="https://www.youtube.com/channel/UCBX2wyFXuy5EIapVn8fj0Zw" target="_blank" rel="noopener noreferrer">youtube</a>
           </li>
           <li className={utilStyles.listItem}>
-            <a href="https://kndkndknd.bandcamp.com/">bandcamp</a>
+            <a href="https://kndkndknd.bandcamp.com/" target="_blank" rel="noopener noreferrer">bandcamp</a>
+          </li>
+          <li className={utilStyles.listItem}>
+            <a href="https://soundcloud.com/knd" target="_blank" rel="noopener noreferrer">soundcloud</a>
+          </li>
+          <li className={utilStyles.listItem}>
+            <a href="https://x.com/knd" target="_blank" rel="noopener noreferrer">x / twitter</a>
           </li>
         </ul>
       </section>
@@ -70,8 +76,8 @@ export const getStaticProps: GetStaticProps = async () => {
   let i: number = -1
   const now: Date = new Date()
   allPostsData.concert.forEach((element, index) => {
-    const date: Date = parseISO(element.date)
-    if(date > now) i = index
+    const { end } = parsePostDate(element.date)
+    if(end > now) i = index
   })
   allPostsData.concert = allPostsData.concert.slice(0,i+1)
   return {

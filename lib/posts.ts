@@ -4,6 +4,7 @@ import matter from 'gray-matter'
 import { remark } from "remark";
 import html from 'remark-html';
 import markdownToHtml from 'zenn-markdown-html';
+import { parsePostDate } from './date'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
@@ -33,28 +34,18 @@ export function getSortedPostsData() {
   }
 
   allPostsData.map(post=>{
-    if(post.type === "concert"){
+    if(post.type === "concert" || post.type === "exhibition"){
       classifiedPostData.concert.push(post)
     } else if(post.type === "release") {
       classifiedPostData.release.push(post)
     }
   })
   //return classifiedPostData
-  // 投稿を日付でソートする
-  classifiedPostData.concert.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1
-    } else {
-      return -1
-    }
-  })
-  classifiedPostData.release.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1
-    } else {
-      return -1
-    }
-  })
+  // 投稿を日付でソートする（範囲日付の場合は開始日基準で降順）
+  const byStartDesc = (a, b) =>
+    parsePostDate(b.date).start.getTime() - parsePostDate(a.date).start.getTime()
+  classifiedPostData.concert.sort(byStartDesc)
+  classifiedPostData.release.sort(byStartDesc)
 
   return classifiedPostData
 }
