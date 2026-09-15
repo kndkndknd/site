@@ -17,4 +17,4 @@ DJ:
 Food:
 ■Currytoronica
 
-[![Image from Gyazo](https://i.gyazo.com/7943a65195215537943085120e475cfd.png)](https://gyazo.com/7943a65195215537943085120e475cfd)
+[![Extreme North & Extreme Response #3](https://cdn.jsdelivr.net/gh/kndkndknd/asset@main/images/concerts/20260221_ExtremeNorth_ExtremeResponse_3.jpeg)](https://cdn.jsdelivr.net/gh/kndkndknd/asset@main/images/concerts/20260221_ExtremeNorth_ExtremeResponse_3.jpeg)

@@ -19,4 +19,4 @@ Tiroru （Duo）
 BGM: Ikuko Morozumi
 FOOD:カリーらっこ
 
-[![Image from Gyazo](https://i.gyazo.com/0870b8e6f85c1b6c08933175b638d256.jpg)](https://gyazo.com/0870b8e6f85c1b6c08933175b638d256)
+[![FEEDBACK:MIX4](https://cdn.jsdelivr.net/gh/kndkndknd/asset@main/images/concerts/20260429_FEEDBACK_MIX_4.jpeg)](https://cdn.jsdelivr.net/gh/kndkndknd/asset@main/images/concerts/20260429_FEEDBACK_MIX_4.jpeg)

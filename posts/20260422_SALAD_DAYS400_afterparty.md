@@ -24,4 +24,4 @@ mado
 Michael
 murakami
 
-[![Image from Gyazo](https://i.gyazo.com/f4068587c993826b1fbd63e71bffe479.jpg)](https://gyazo.com/f4068587c993826b1fbd63e71bffe479)
+[![「SALAD DAYS vol.400」after party](https://cdn.jsdelivr.net/gh/kndkndknd/asset@main/images/concerts/20260422_saladdays400.jpeg)](https://cdn.jsdelivr.net/gh/kndkndknd/asset@main/images/concerts/20260422_saladdays400.jpeg)
