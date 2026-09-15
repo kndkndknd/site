@@ -54,7 +54,10 @@ export default function Post({ postData }: Props) {
         <meta name="og:title" content={postData.title} />
       </Head>
       <h2>{postData.title}</h2>
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <div
+        className="znc"
+        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+      />
     </Layout>
   )
 }

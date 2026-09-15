@@ -27,7 +27,10 @@ export default function Post({ postData }: Props) {
       <header className={utilStyles.postHeader}>
         {postData.type && <span className={utilStyles.tag}>{postData.type}</span>}
       </header>
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <div
+        className="znc"
+        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+      />
       <footer className={utilStyles.postFooter}>
         <Link href="/">← back</Link>
       </footer>
