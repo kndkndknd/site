@@ -15,4 +15,4 @@ DJ:
 ■Chiho Oka
 https://ochiaisoup.com/?p=6015
 
-[![Image from Gyazo](https://i.gyazo.com/fb02211f7797e878bc0cfae773b4c70b.png)](https://gyazo.com/fb02211f7797e878bc0cfae773b4c70b)
+[![computer music party or something](https://cdn.jsdelivr.net/gh/kndkndknd/asset@main/images/concerts/20251018_computermusicpartyorsomething.jpeg)](https://cdn.jsdelivr.net/gh/kndkndknd/asset@main/images/concerts/20251018_computermusicpartyorsomething.jpeg)

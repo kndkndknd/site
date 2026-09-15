@@ -17,4 +17,4 @@ Hiroyuki Ura
 
 open 7PM door2000yen(＋1d order)
 
-[![Image from Gyazo](https://i.gyazo.com/b777aaef1f6ec58ffd217abeca50c0df.png)](https://gyazo.com/b777aaef1f6ec58ffd217abeca50c0df)
+[![THINGS CHANGE](https://cdn.jsdelivr.net/gh/kndkndknd/asset@main/images/concerts/20251023_thingschange.jpeg)](https://cdn.jsdelivr.net/gh/kndkndknd/asset@main/images/concerts/20251023_thingschange.jpeg)

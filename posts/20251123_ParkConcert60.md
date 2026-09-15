@@ -24,4 +24,4 @@ Yui Nakamura
 
 企画：knd、Nothto
 
-[![Image from Gyazo](https://i.gyazo.com/f9162b013286f783feb8f6b4c1521fde.png)](https://gyazo.com/f9162b013286f783feb8f6b4c1521fde)
+[![ParkConcert60](https://cdn.jsdelivr.net/gh/kndkndknd/asset@main/images/concerts/20251123_parkconcert60.jpeg)](https://cdn.jsdelivr.net/gh/kndkndknd/asset@main/images/concerts/20251123_parkconcert60.jpeg)
