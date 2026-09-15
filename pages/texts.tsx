@@ -3,15 +3,19 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
-import { getSortedTextsData } from "../lib/posts"
+import { getSortedTextsData, PostMeta } from "../lib/posts"
 import Date from '../components/date'
+
+type Props = {
+  allTextData: PostMeta[]
+}
 
 // import { useRef } from 'react';
 // import Script from 'next/script';
 
 // import { useEffect } from 'react';
 
-export default function Home({ allTextData }) {
+export default function Home({ allTextData }: Props) {
   return (
     <Layout home>
       <Head>
@@ -34,7 +38,7 @@ export default function Home({ allTextData }) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
   const allTextData = getSortedTextsData()
   return {
     props: {
