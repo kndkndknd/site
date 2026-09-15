@@ -34,7 +34,7 @@ export function getSortedPostsData() {
   }
 
   allPostsData.map(post=>{
-    if(post.type === "concert" || post.type === "exhibition"){
+    if(post.type === "concert" || post.type === "exhibition" || post.type === "event"){
       classifiedPostData.concert.push(post)
     } else if(post.type === "release") {
       classifiedPostData.release.push(post)
