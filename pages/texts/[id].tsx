@@ -1,6 +1,8 @@
+import { GetStaticProps, GetStaticPaths } from 'next'
+import { ParsedUrlQuery } from 'querystring'
 import Head from 'next/head'
 import Layout from '../../components/layout'
-import { getAllPostIds, getPostData } from '../../lib/posts'
+import { getAllPostIds, getPostData, PostData } from '../../lib/posts'
 import path from 'path'
 
 // import { useEffect } from 'react';
@@ -9,7 +11,15 @@ import path from 'path'
 
 const textsDirectory = path.join(process.cwd(), 'texts')
 
-export default function Post({ postData, router }) {
+type Props = {
+  postData: PostData
+}
+
+interface Params extends ParsedUrlQuery {
+  id: string
+}
+
+export default function Post({ postData }: Props) {
 /*
   useEffect(() => {
 
@@ -44,12 +54,15 @@ export default function Post({ postData, router }) {
         <meta name="og:title" content={postData.title} />
       </Head>
       <h2>{postData.title}</h2>
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <div
+        className="znc"
+        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+      />
     </Layout>
   )
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPostIds(textsDirectory)
   return {
     paths,
@@ -57,8 +70,10 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id, textsDirectory)
+export const getStaticProps: GetStaticProps<Props, Params> = async ({
+  params
+}) => {
+  const postData = await getPostData(params!.id, textsDirectory)
   return {
     props: {
       postData

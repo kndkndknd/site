@@ -1,13 +1,18 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
+import { startOfDay } from 'date-fns'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from "../lib/posts"
+import { getSortedPostsData, ClassifiedPosts } from "../lib/posts"
 import { parsePostDate } from "../lib/date"
 import DateParse from '../components/date'
 
-export default function Home({ allPostsData }) {
+type Props = {
+  allPostsData: ClassifiedPosts
+}
+
+export default function Home({ allPostsData }: Props) {
   return (
     <Layout home>
       <Head>
@@ -70,16 +75,13 @@ export default function Home({ allPostsData }) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
   const allPostsData = getSortedPostsData()
-  console.log(allPostsData)
-  let i: number = -1
-  const now: Date = new Date()
-  allPostsData.concert.forEach((element, index) => {
-    const { end } = parsePostDate(element.date)
-    if(end > now) i = index
-  })
-  allPostsData.concert = allPostsData.concert.slice(0,i+1)
+  // 終了日が今日以降のものを upcoming として表示する（日単位）
+  const startOfToday = startOfDay(new Date()).getTime()
+  allPostsData.concert = allPostsData.concert.filter(
+    post => parsePostDate(post.date).end.getTime() >= startOfToday
+  )
   return {
     props: {
       allPostsData
