@@ -22,10 +22,12 @@ export default function Home({ allPostsData }: Props) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>upcoming</h2>
         <ul className={utilStyles.list}>
-          { allPostsData.concert.length > 0 ? allPostsData.concert.map(({ id, date, title }) => (
+          { allPostsData.concert.length > 0 ? allPostsData.concert.map(({ id, date, title, locate }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
-                <DateParse dateString={date} />  {title}
+                <DateParse dateString={date} />
+                {title ? ` - ${title}` : ''}
+                {locate ? ` - ${locate}` : ''}
               </Link>
             </li>
           )): <li>no concert scheduled</li>}

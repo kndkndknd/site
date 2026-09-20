@@ -2,6 +2,7 @@
 title: 'live code your track live'
 date: '2020-04-02'
 type: 'concert'
+locate: 'Internet'
 ---
 
 ## live code your track live

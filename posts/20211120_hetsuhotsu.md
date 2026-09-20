@@ -2,6 +2,7 @@
 date: '2021-11-20'
 title: '丿乀'
 type: 'concert'
+locate: 'RiNen'
 ---
 ## 丿乀
 2021-11-20

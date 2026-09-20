@@ -2,6 +2,7 @@
 date: '2021-09-15'
 title: 'K/A/T/O MASSACRE vol.340'
 type: 'concert'
+locate: 'FORESTLIMIT'
 ---
 ## K/A/T/O MASSACRE vol.340
 9/15(wed)  

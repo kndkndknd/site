@@ -2,6 +2,7 @@
 date: '2021-11-28'
 title: '"Ftarri Live" レーベル発足記念 Day 3'
 type: 'concert'
+locate: 'Ftarri'
 ---
 ## "Ftarri Live" レーベル発足記念 Day 3
 11月28日 (日) 午後7時30分開場、8時開演  

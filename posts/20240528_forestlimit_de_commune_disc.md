@@ -1,13 +1,13 @@
 ---
 date: '2024-05-28'
 type: 'concert'
-locate: 'forestlimit'
-title: 'Forestlimit de Commune Disc'
+locate: 'FORESTLIMIT'
+title: 'FORESTLIMIT de Commune Disc'
 ---
 
 2024.5.28
-Forestlimit de Commune Disc
-at Forestlimit
+FORESTLIMIT de Commune Disc
+at FORESTLIMIT
 
 op/st 19:00
 Door: 2000Jpy 1D Order

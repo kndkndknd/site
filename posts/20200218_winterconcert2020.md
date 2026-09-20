@@ -2,6 +2,7 @@
 title: 'series#14 WinterConcert2020'
 date: '2020-02-18'
 type: 'concert'
+locate: 'Ftarri'
 ---
 
 ## series#14 WinterConcert2020

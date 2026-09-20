@@ -2,6 +2,7 @@
 title: 'Algorave Tokyo'
 date: '2020-02-15'
 type: 'concert'
+locate: 'soup'
 ---
 
 ## Algorave Tokyo

@@ -1,7 +1,7 @@
 ---
 date: '2024-04-17'
 type: 'concert'
-locate: 'forestlimit'
+locate: 'FORESTLIMIT'
 title: 'K/A/T/O MASSACRE vol472'
 ---
 

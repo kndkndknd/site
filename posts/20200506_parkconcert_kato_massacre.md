@@ -2,6 +2,7 @@
 title: '第55回 公園コンサート × K/A/T/O MASSACRE vol271'
 date: '2020-05-06'
 type: 'concert'
+locate: '公園'
 ---
 
 ## 第55回 公園コンサート × K/A/T/O MASSACRE vol271
