@@ -2,6 +2,7 @@
 title: 'Sound Screening Online #3 with knd'
 date: '2020-04-25'
 type: 'concert'
+locate: 'Internet'
 ---
 
 ## Sound Screening Online #3 with knd

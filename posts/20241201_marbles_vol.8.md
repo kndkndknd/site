@@ -2,7 +2,7 @@
 date: '2024-12-01'
 type: 'concert'
 title: 'marbles vol.8'
-locate: 'forestlimit'
+locate: 'FORESTLIMIT'
 ---
 
 【marbles vol.8】

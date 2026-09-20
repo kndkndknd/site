@@ -1,22 +1,22 @@
 ---
 date: '2023-07-30'
 type: 'concert'
-locate: 'forestlimit'
+locate: 'FORESTLIMIT'
 title: '俺たちのREALITY'
 ---
 
 7/30 #俺たちのREALITY
-at Forestlimit
+at FORESTLIMIT
 door.2000Jpy /1D.Order
 
 【act】
-Forestlimitから
+FORESTLIMITから
 エママウス、浅間ヤーマン、みゃーまゆ、knd、Dirty Dirt、DJ電熱線、inouwye、すず
 
 REALITYから
 スナック園芸、西園寺流星群、ＹＺＯＸ、ごーきゅん、オモチャン、夜中。、てんぷら
 
-1900 DJ電熱線(DJ:Forestlimit)
+1900 DJ電熱線(DJ:FORESTLIMIT)
 1920 YZOX(DJ:REALITY)
 1940 オモチャン(Live:R)
 1950 ごーきゅん(Live:R)15

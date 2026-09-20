@@ -1,7 +1,7 @@
 ---
 date: '2023-09-17'
 type: 'concert'
-locate: 'NEW STANDARD'
+locate: '晴れたら空に豆まいて'
 title: 'NEW STANDARD 3'
 ---
 

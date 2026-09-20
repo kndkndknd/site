@@ -1,14 +1,14 @@
 ---
 date: '2022-12-02'
 type: 'concert'
-locate: 'forestlimit'
+locate: 'FORESTLIMIT'
 title: 'ケンジル・ビエンの7つの大罪'
 ---
 
 ケンジル・ビエンの7つの大罪
 
 12月02日(金)
-forestlimit
+FORESTLIMIT
 料金:2000円
 
 構成:メガネ　脳BRAIN

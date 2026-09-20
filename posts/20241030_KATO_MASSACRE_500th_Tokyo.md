@@ -2,7 +2,7 @@
 date: '2024-10-30'
 type: 'concert'
 title: 'K/A/T/O MASSACRE 500th〜Tokyo'
-locate: 'forestlimit'
+locate: 'FORESTLIMIT'
 ---
 
 K/A/T/O MASSACRE 500th
