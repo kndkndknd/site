@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -13,6 +14,17 @@ type Props = {
 }
 
 export default function Home({ allPostsData }: Props) {
+  // 表示時に「終了日が表示日以降」のものだけを upcoming として表示する
+  const [startOfToday, setStartOfToday] = useState<number | null>(null)
+  useEffect(() => {
+    setStartOfToday(startOfDay(new Date()).getTime())
+  }, [])
+  const concerts = startOfToday === null
+    ? allPostsData.concert
+    : allPostsData.concert.filter(
+        post => parsePostDate(post.date).end.getTime() >= startOfToday
+      )
+
   return (
     <Layout home>
       <Head>
@@ -22,7 +34,7 @@ export default function Home({ allPostsData }: Props) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>upcoming</h2>
         <ul className={utilStyles.list}>
-          { allPostsData.concert.length > 0 ? allPostsData.concert.map(({ id, date, title, locate }) => (
+          { concerts.length > 0 ? concerts.map(({ id, date, title, locate }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
                 <DateParse dateString={date} />
@@ -79,7 +91,7 @@ export default function Home({ allPostsData }: Props) {
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const allPostsData = getSortedPostsData()
-  // 終了日が今日以降のものを upcoming として表示する（日単位）
+  // ビルド時点の「今日」を基準に絞り込み、クライアント側フィルタのベースラインにする（日単位）
   const startOfToday = startOfDay(new Date()).getTime()
   allPostsData.concert = allPostsData.concert.filter(
     post => parsePostDate(post.date).end.getTime() >= startOfToday
