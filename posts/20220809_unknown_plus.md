@@ -21,3 +21,5 @@ DJ :
 Twill
 
 [![Image from Gyazo](https://i.gyazo.com/744883a178785a3ad7e894669cd8b2b3.jpg)](https://gyazo.com/744883a178785a3ad7e894669cd8b2b3)
+
+コロナにより出演をキャンセルしました

@@ -8,5 +8,3 @@ title: 'K/A/T/O MASSACRE 400th anniversary'
 11/23(祝日)
 K/A/T/O MASSACRE 400th anniversary
 at 海辺
-
-Computer Music Party 2
