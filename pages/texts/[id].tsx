@@ -2,6 +2,7 @@ import { GetStaticProps, GetStaticPaths } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 import Head from 'next/head'
 import Layout from '../../components/layout'
+import DateParse from '../../components/date'
 import { getAllPostIds, getPostData, PostData } from '../../lib/posts'
 import path from 'path'
 
@@ -54,6 +55,9 @@ export default function Post({ postData }: Props) {
         <meta name="og:title" content={postData.title} />
       </Head>
       <h2>{postData.title}</h2>
+      <p>
+        <DateParse dateString={postData.date} />
+      </p>
       <div
         className="znc"
         dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
